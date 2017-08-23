@@ -24,7 +24,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class FastSinchroResponse implements java.io.Serializable {
 
-
     public static final String CREATE_PAYMENT_PROOF = "create_pp";
     public static final String EDIT_PAYMENT_PROOF = "edit_pp";
     public static final String DOCUMENT_NUMBER = "dn";
@@ -46,36 +45,12 @@ public class FastSinchroResponse implements java.io.Serializable {
     public static final String EDIT_PRODUCT = "edit_stt";
     public static final String PRODUCT_SALE_PRICE = "psp";
     public static final String CREATE_PRODUCT_COST_PRICE = "create_pcp";
+    public static final String EDIT_PRODUCT_COST_PRICE = "edit_pcp";
     public static final String CREATE_STOCK = "create_stock";
     public static final String EDIT_STOCK = "edit_stock";
+    public static final String CREATE_INTERNAL_STOCK_MOVEMENT = "create_ism";
+    public static final String EDIT_INTERNAL_STOCK_MOVEMENT = "edit_ism";
 
-
-
-// bean.addMapValue("create_idd",identityDocumentService.getCreateByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_idd",identityDocumentService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_actors",actorService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_actors",actorService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_rol",rolService.getCreateByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_rol",rolService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_company",companyService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_company",companyService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_user",userService.getCreateByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("edit_user",userService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode(),false));
-//                bean.addMapValue("create_uom",uomService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_uom",uomService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_stt",stockTypeService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_stt",stockTypeService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("create_product",productService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate));
-//                bean.addMapValue("edit_product",productService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,false));
-//                bean.addMapValue("psp",productSalePriceService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("create_pcp",productCostPriceService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("edit_pcp",productCostPriceService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode(),false));
-//                bean.addMapValue("create_stock",stockService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("edit_stock",stockService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode(),false));
-//                bean.addMapValue("create_ism",internalStockMovementService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("edit_ism",internalStockMovementService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode(),false));
-//                bean.addMapValue("create_pcp",productCostPriceService.getCreatedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode()));
-//                bean.addMapValue("edit_pcp",productCostPriceService.getEditedByAfterDate(request.getLastUpdateDate(),currentDateUpdate,request.getCompanyCode(),false));
 
     @NonNull
     private HashMap<String, List<Object[]>> mapValues = new HashMap();
