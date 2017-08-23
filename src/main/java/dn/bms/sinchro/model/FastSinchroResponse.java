@@ -54,6 +54,8 @@ public class FastSinchroResponse implements java.io.Serializable {
     public static final String EDIT_PRODUCT_LINE = "edit_pl";
     public static final String CREATE_SELLER = "create_sll";
     public static final String EDIT_SELLER = "edit_sll";
+    public static final String CREATE_PAYMENT_VOUCHER = "create_pv";
+    public static final String EDIT_PAYMENT_VOUCHER = "edit_pv";
 
 
     @NonNull
