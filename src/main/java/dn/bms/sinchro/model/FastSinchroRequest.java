@@ -5,14 +5,12 @@
  */
 package dn.bms.sinchro.model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+
+import java.util.*;
 
 /**
  *
@@ -24,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 public class FastSinchroRequest implements java.io.Serializable{
 
     @NonNull
-    private HashMap<String, List<Object[]>> mapValues = new HashMap();
+    private HashMap<String, List<Map<String,Object>>> mapValues = new HashMap();
     @NonNull
     private Date lastUpdateDate;    
     @NonNull
@@ -38,7 +36,7 @@ public class FastSinchroRequest implements java.io.Serializable{
     @NonNull
     private List<FastSinchroPoint> points = new ArrayList();
     
-    public void add(String key, List<Object[]> data) {
+    public void add(String key, List<Map<String,Object>> data) {
         mapValues.put(key, data);
     }
 }

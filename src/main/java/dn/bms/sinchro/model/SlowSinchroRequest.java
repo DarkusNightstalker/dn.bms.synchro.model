@@ -8,6 +8,7 @@ package dn.bms.sinchro.model;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -21,7 +22,15 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class SlowSinchroRequest implements java.io.Serializable{
-    
+
+    public static final String ACTOR = "actor";
+    public static final String SALE = "sale";
+    public static final String PURCHASE = "purchase";
+    public static final String CUSTOMER_RETURN = "customer_resturn";
+    public static final String SUPPLIER_RETURN = "supplier_return";
+    public static final String PAYMENT = "payment";
+    public static final String INTERNAL_STOCK_MOVEMENT = "ism";
+
     @NonNull
     private String username;
     @NonNull
@@ -31,5 +40,5 @@ public class SlowSinchroRequest implements java.io.Serializable{
     @NonNull
     private String companyCode;
     @NonNull
-    private HashMap<String, List<Object[]>> mapValues = new HashMap();
+    private HashMap<String, List<Map<String,Object>>> mapValues = new HashMap();
 }
